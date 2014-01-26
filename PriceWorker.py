@@ -3,15 +3,14 @@ from datetime import *
 from time import sleep
 
 
-##WRITE_PATH = '/mnt/historic_prices/'
-WRITE_PATH = 'test/'
+WRITE_PATH = '/mnt/historic_prices/'
+##WRITE_PATH = 'test/'
 
 def LogPrices():
     timestamp = datetime.now().strftime('%Y-%m-%d_%H%M')
 
     conn = None
     while True:
-        print 'here'
         if conn:
             conn.close()
             sleep(1)
